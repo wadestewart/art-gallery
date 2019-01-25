@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Header from '../header/Header'
-import Flashcard from '../flashcard/Flashcard'
+import Header from '../Header/Header'
+import Flashcard from '../Flashcard/Flashcard'
 
 class App extends Component {
   constructor() {
@@ -28,7 +28,8 @@ class App extends Component {
     fetch('https://art-history-back.herokuapp.com/')
       .then(res => res.json())
       .then(data => {
-        this.setState({ artworks: data.objects })
+        console.log(data.objects)
+        // this.setState({ artworks: data })
       })
       .catch(err => console.log(err))
   }
@@ -36,20 +37,20 @@ class App extends Component {
   render() {
     // console.log(this.state.images)
 
-    let flashcard = this.state.artworks[this.state.currentIndex]
+    // let flashcard = this.state.artworks[this.state.currentIndex]
 
-    let artFlashcard = 
-      (flashcard !== undefined)
-      ? <Flashcard
-          flashcard={flashcard}
-          onTimerEnd={this.next}
-        />
-      : null 
+    // let artFlashcard = 
+    //   (flashcard !== undefined)
+    //   ? <Flashcard
+    //       flashcard={flashcard}
+    //       onTimerEnd={this.next}
+    //     />
+    //   : null 
 
     return (
       <div>
         <Header />
-        {artFlashcard}
+        {/* {artFlashcard} */}
       </div>
     )
   }

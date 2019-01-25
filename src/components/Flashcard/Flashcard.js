@@ -45,25 +45,6 @@ class Flashcard extends Component {
             })
             .catch(err => console.log(err))
     }
-
-    // This is from the React Docs - to prevent memory leaks from unmounted components - https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
-    // makeCancelable = (promise) => {
-    //     let hasCanceled = false
-
-    //     const wrappedPromise = new Promise((resolve, reject) => {
-    //         promise.then(
-    //           val => hasCanceled ? reject({isCanceled: true}) : resolve(val),
-    //           error => hasCanceled ? reject({isCanceled: true}) : reject(error)
-    //         );
-    //       });
-        
-    //       return {
-    //         promise: wrappedPromise,
-    //         cancel() {
-    //           hasCanceled = true;
-    //         },
-    //       };
-    // }
     
     componentDidMount = () => {
         this.fetchData()
@@ -79,21 +60,6 @@ class Flashcard extends Component {
             this.fetchData()
         }
     }
-
-    // componentWillUnmount = () => {
-    //     const cancelablePromise = this.makeCancelable(
-    //         new Promise(r => 
-    //             // console.log(r)
-    //             component.setState({}))
-    //       )
-          
-    //       cancelablePromise
-    //         .promise
-    //         .then(() => console.log('resolved'))
-    //         .catch((reason) => console.log('isCanceled', reason.isCanceled))
-          
-    //       cancelablePromise.cancel()
-    // }
 
     render() {
         let imgUrl = this.state.imageUrl
