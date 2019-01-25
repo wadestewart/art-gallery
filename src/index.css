@@ -1,11 +1,5 @@
-/* *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
-} */
-
-/* .art-gallery {
-  display: flex;
-  height: 100%;
-  width: 100%;
-} */
+}
