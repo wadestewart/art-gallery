@@ -8,8 +8,10 @@ class App extends Component {
     super()
 
     this.state = {
+      artworks:     [],
+      // artwork_id:   "",
       currentIndex: 0,
-      timer: 2,
+      timer:        2
     }
   }
 
@@ -20,7 +22,7 @@ class App extends Component {
       : this.state.currentIndex
 
     this.setState({
-      currentIndex: nextIndex,
+      currentIndex: nextIndex
     })
   }
 
@@ -28,29 +30,30 @@ class App extends Component {
     fetch('https://art-history-back.herokuapp.com/')
       .then(res => res.json())
       .then(data => {
-        console.log(data.objects)
-        // this.setState({ artworks: data })
+        this.setState({ 
+          artworks: data.objects
+        })
       })
       .catch(err => console.log(err))
   }
       
   render() {
-    // console.log(this.state.images)
+    // console.log(this.state.artworks)
 
-    // let flashcard = this.state.artworks[this.state.currentIndex]
+    let flashcard = this.state.artworks[this.state.currentIndex]
 
-    // let artFlashcard = 
-    //   (flashcard !== undefined)
-    //   ? <Flashcard
-    //       flashcard={flashcard}
-    //       onTimerEnd={this.next}
-    //     />
-    //   : null 
+    let artFlashcard = 
+      (flashcard !== undefined)
+      ? <Flashcard
+          card={flashcard}
+          onTimerEnd={this.next}
+        />
+      : null
 
     return (
       <div>
         <Header />
-        {/* {artFlashcard} */}
+        {artFlashcard}
       </div>
     )
   }

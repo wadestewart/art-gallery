@@ -28,13 +28,12 @@ class Flashcard extends Component {
     }
 
     fetchData = () => {
-        const artwork = this.props.flashcard
         
         this.setState({
             currentTimeout: window.setTimeout(this.decrementTimer, 3000)
         })
         
-        fetch(`https://art-history-back.herokuapp.com/${artwork.id}`)
+        fetch(`https://art-history-back.herokuapp.com/${this.props.card.id}`)
             .then(res => res.json())
             .then(data => {
                 let newImage = data.object.images[0].b.url
@@ -51,7 +50,7 @@ class Flashcard extends Component {
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.flashcard.id !== this.props.flashcard.id) {
+        if (prevProps.card.id !== this.props.card.id) {
             clearTimeout(this.state.currentTimeout)
             this.setState({
                 timer: 1,
