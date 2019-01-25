@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './Flashcard.css'
+
 class Flashcard extends Component {
     constructor(props) {
         super(props)
