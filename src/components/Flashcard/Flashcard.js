@@ -68,21 +68,19 @@ class Flashcard extends Component {
 
         if (artwork.title_raw !== null && artwork.title_raw !== "" && artwork.gallery_text !== null) {
             detail = (
-                <div className="container">
-                    <div className="valign">
-                        <div className="col s12 m6">
-                            <div className="card horizontal">
-                                <div className="card-image">
-                                    <img src={imgUrl} alt="Artwork" />
-                                </div>
-                                <div className="card-stacked">
-                                    <div className="card-content">
-                                        <h5>Artwork Title:</h5>
-                                        <p>{artwork.title_raw}</p>
-                                        <h5>Artwork Details:</h5>
-                                        <p>{artwork.gallery_text}</p>
-                                        <h5>{artwork.creditline}</h5>
-                                    </div>
+                <div className="row valign-wrapper">
+                    <div className="col s12">
+                        <div className="card horizontal">
+                            <div className="card-image">
+                                <img src={imgUrl} alt="Artwork" />
+                            </div>
+                            <div className="card-stacked">
+                                <div className="card-content">
+                                    <h5>Artwork Title:</h5>
+                                    <p>{artwork.title_raw}</p>
+                                    <h5>Artwork Details:</h5>
+                                    <p>{artwork.gallery_text}</p>
+                                    <h5>{artwork.creditline}</h5>
                                 </div>
                             </div>
                         </div>
@@ -91,21 +89,19 @@ class Flashcard extends Component {
             )
         } else if (artwork.title !== null && artwork.title !== "" && artwork.gallery_text !== null) {
             detail = (
-                <div className="container">
-                    <div className="valign">
-                        <div className="col s12 m6">
-                            <div className="card horizontal">
-                                <div className="card-image">
-                                    <img src={imgUrl} alt="Artwork" />
-                                </div>
-                                <div className="card-stacked">
-                                    <div className="card-content">
-                                        <h5>Artwork Title:</h5>
-                                        <p>{artwork.title}</p>
-                                        <h5>Artwork Details:</h5>
-                                        <p>{artwork.gallery_text}</p>
-                                        <h5>{artwork.creditline}</h5>
-                                    </div>
+                <div className="row valign-wrapper">
+                    <div className="col s12">
+                        <div className="card horizontal">
+                            <div className="card-image">
+                                <img src={imgUrl} alt="Artwork" />
+                            </div>
+                            <div className="card-stacked">
+                                <div className="card-content">
+                                    <h5>Artwork Title:</h5>
+                                    <p>{artwork.title}</p>
+                                    <h5>Artwork Details:</h5>
+                                    <p>{artwork.gallery_text}</p>
+                                    <h5>{artwork.creditline}</h5>
                                 </div>
                             </div>
                         </div>
@@ -114,21 +110,19 @@ class Flashcard extends Component {
             )
         } else if (artwork.title_raw !== null && artwork.title_raw !== "" && artwork.label_text !== null) {
             detail = (
-                <div className="container">
-                    <div className="valign">
-                        <div className="col s12 m6">
-                            <div className="card horizontal">
-                                <div className="card-image">
-                                    <img src={imgUrl} alt="Artwork" />
-                                </div>
-                                <div className="card-stacked">
-                                    <div className="card-content">
-                                        <h5>Artwork Title:</h5>
-                                        <p>{artwork.title_raw}</p>
-                                        <h5>Artwork Details:</h5>
-                                        <p>{artwork.label_text}</p>
-                                        <h5>{artwork.creditline}</h5>
-                                    </div>
+                <div className="row valign-wrapper">
+                    <div className="col s12">
+                        <div className="card horizontal">
+                            <div className="card-image">
+                                <img src={imgUrl} alt="Artwork" />
+                            </div>
+                            <div className="card-stacked">
+                                <div className="card-content">
+                                    <h5>Artwork Title:</h5>
+                                    <p>{artwork.title_raw}</p>
+                                    <h5>Artwork Details:</h5>
+                                    <p>{artwork.label_text}</p>
+                                    <h5>{artwork.creditline}</h5>
                                 </div>
                             </div>
                         </div>
@@ -137,21 +131,19 @@ class Flashcard extends Component {
             )
         } else if (artwork.title !== null && artwork.title !== "" && artwork.label_text !== null) {
             detail = (
-                <div className="container">
-                    <div className="valign">
-                        <div className="col s12 m6">
-                            <div className="card horizontal">
-                                <div className="card-image">
-                                    <img src={imgUrl} alt="Artwork" />
-                                </div>
-                                <div className="card-stacked">
-                                    <div className="card-content">
-                                        <h5>Artwork Title:</h5>
-                                        <p>{artwork.title}</p>
-                                        <h5>Artwork Details:</h5>
-                                        <p>{artwork.label_text}</p>
-                                        <h5>{artwork.creditline}</h5>
-                                    </div>
+                <div className="row valign-wrapper">
+                    <div className="col s12">
+                        <div className="card horizontal">
+                            <div className="card-image">
+                                <img src={imgUrl} alt="Artwork" />
+                            </div>
+                            <div className="card-stacked">
+                                <div className="card-content">
+                                    <h5>Artwork Title:</h5>
+                                    <p>{artwork.title}</p>
+                                    <h5>Artwork Details:</h5>
+                                    <p>{artwork.label_text}</p>
+                                    <h5>{artwork.creditline}</h5>
                                 </div>
                             </div>
                         </div>
@@ -160,21 +152,19 @@ class Flashcard extends Component {
             )
         } else {
             detail = (
-                <div className="container">
-                    <div className="valign">
-                        <div className="col s12 m6">
-                            <div className="card horizontal">
-                                <div className="card-image">
-                                    <img src={imgUrl} alt="Artwork" />
-                                </div>
-                                <div className="card-stacked">
-                                    <div className="card-content">
-                                        <h5>Artwork Title:</h5>
-                                        <p>{artwork.title}</p>
-                                        <h5>Artwork Details:</h5>
-                                        <p>No Details Available</p>
-                                        <h5>{artwork.creditline}</h5>
-                                    </div>
+                <div className="row valign-wrapper">
+                    <div className="col s12">
+                        <div className="card horizontal">
+                            <div className="card-image">
+                                <img src={imgUrl} alt="Artwork" />
+                            </div>
+                            <div className="card-stacked">
+                                <div className="card-content">
+                                    <h5>Artwork Title:</h5>
+                                    <p>{artwork.title}</p>
+                                    <h5>Artwork Details:</h5>
+                                    <p>No Details Available</p>
+                                    <h5>{artwork.creditline}</h5>
                                 </div>
                             </div>
                         </div>
