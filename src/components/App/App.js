@@ -51,7 +51,7 @@ class App extends Component {
       : null
 
     return (
-      <div className="art-gallery">
+      <div>
         <Header />
         {artFlashcard}
       </div>

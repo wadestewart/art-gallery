@@ -69,8 +69,8 @@ class Flashcard extends Component {
         if (artwork.title_raw !== null && artwork.title_raw !== "" && artwork.gallery_text !== null) {
             detail = (
                 <div className="row valign-wrapper">
-                    <div className="col s12">
-                        <div className="card horizontal">
+                    <div className="col s10 pull-s1">
+                        <div className="card horizontal white">
                             <div className="card-image">
                                 <img src={imgUrl} alt="Artwork" />
                             </div>
@@ -90,8 +90,8 @@ class Flashcard extends Component {
         } else if (artwork.title !== null && artwork.title !== "" && artwork.gallery_text !== null) {
             detail = (
                 <div className="row valign-wrapper">
-                    <div className="col s12">
-                        <div className="card horizontal">
+                    <div className="col s10 pull-s1">
+                        <div className="card horizontal white">
                             <div className="card-image">
                                 <img src={imgUrl} alt="Artwork" />
                             </div>
@@ -111,8 +111,8 @@ class Flashcard extends Component {
         } else if (artwork.title_raw !== null && artwork.title_raw !== "" && artwork.label_text !== null) {
             detail = (
                 <div className="row valign-wrapper">
-                    <div className="col s12">
-                        <div className="card horizontal">
+                    <div className="col s10 pull-s1">
+                        <div className="card horizontal white">
                             <div className="card-image">
                                 <img src={imgUrl} alt="Artwork" />
                             </div>
@@ -132,8 +132,8 @@ class Flashcard extends Component {
         } else if (artwork.title !== null && artwork.title !== "" && artwork.label_text !== null) {
             detail = (
                 <div className="row valign-wrapper">
-                    <div className="col s12">
-                        <div className="card horizontal">
+                    <div className="col s10 pull-s1">
+                        <div className="card horizontal white">
                             <div className="card-image">
                                 <img src={imgUrl} alt="Artwork" />
                             </div>
@@ -153,8 +153,8 @@ class Flashcard extends Component {
         } else {
             detail = (
                 <div className="row valign-wrapper">
-                    <div className="col s12">
-                        <div className="card horizontal">
+                    <div className="col s10 pull-s1">
+                        <div className="card horizontal white">
                             <div className="card-image">
                                 <img src={imgUrl} alt="Artwork" />
                             </div>
